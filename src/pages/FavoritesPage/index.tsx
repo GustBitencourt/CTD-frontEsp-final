@@ -30,26 +30,8 @@ export const FavoritesPage = () => {
     }, [personagens]);
 
 
-    const handleRemoveAllFavorites = (): any => {
-
-        Swal.fire({
-            title: 'Você tem Certeza?',
-            text: "Você não será capaz de reverter isso!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#008000',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Sim, remover todos!'
-        }).then((result: any) => {
-            if (result.isConfirmed) {
-                Swal.fire(
-                    'Removidos!',
-                    'Todos favoritos foram removidos!',
-                    'success'
-                )
-                fetchCharacterThunk()(dispatch);
-            }
-        })
+    const handleRemoveAllFavorites = () => {
+        fetchCharacterThunk()(dispatch);       
     }
 
     return (
