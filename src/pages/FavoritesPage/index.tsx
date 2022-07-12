@@ -7,6 +7,8 @@ import { fetchCharacterThunk } from '../../store/actions/characters.actions';
 import { CharacterGrid } from "../../components/CharacterGrid";
 import Swal from 'sweetalert2';
 
+import './style.css';
+
 /**
  * Esta é a página de favoritos. Aqui você deve ver todos os personagens marcados como favoritos
  *
@@ -54,7 +56,7 @@ export const FavoritesPage = () => {
         <div className="container">
             <div className="actions">
                 <h3>Personagens Favoritos</h3>
-                {favPersonagens && favPersonagens.length <= 0 && <span className="fav_message" >Nenhum personagem adicionado a lista ainda!</span>}
+                {favPersonagens && favPersonagens.length <= 0 && <span id="fav_message" >Nenhum personagem adicionado a lista ainda!</span>}
                 <button
                     onClick={() => handleRemoveAllFavorites()}
                     className="fav_remove_button"
