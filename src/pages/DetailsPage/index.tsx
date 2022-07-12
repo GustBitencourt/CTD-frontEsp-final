@@ -75,7 +75,7 @@ export const DetailsPage = () => {
             return <CardEpisode episodio={episodio} key={episodio.id} />
           })
           :
-          <span className="error_message">Que pena :( não apareceu em nenhum episodio!</span>
+          <span className="error_message">Este personagem não apareceu em nenhum episodio!</span>
         }
 
       </div>
