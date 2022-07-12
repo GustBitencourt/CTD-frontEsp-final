@@ -55,10 +55,17 @@ export const Paginacao = () => {
 
     return (
         <div className="paginacao">
-            <button disabled={buttonDisabled()} onClick={handlePrevPage} className={"primary"}>
+            <button 
+                disabled={buttonDisabled()} 
+                onClick={handlePrevPage} 
+                className="prev"
+            >
                 Anterior
             </button>
-            <button disabled={false} onClick={handleNextPage} className={"primary"}>
+            <button 
+                disabled={false} 
+                onClick={handleNextPage} 
+                className={"next"}>
                 Próximo
             </button>
         </div>

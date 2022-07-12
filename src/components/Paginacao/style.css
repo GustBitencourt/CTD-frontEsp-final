@@ -1,0 +1,20 @@
+.paginacao {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prev, .next {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    color: #fff;
+    background: #00f;
+    cursor: pointer;
+}
+
+
+.prev[disabled], .next[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

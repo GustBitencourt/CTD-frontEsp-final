@@ -28,8 +28,8 @@ export const Home = () => {
 
     return (
         <div className="container">
-            <div className="actions">
-                <h3>Catálogo de Personagens</h3>
+            <div>
+                <h3 className='home_title'>Lista de Personagens de Rick And Morty</h3>
             </div>
             
             <Filter />

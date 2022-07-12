@@ -39,14 +39,20 @@ export const Filter = () => {
                 onChange={handleOnChange}
                 value={texto}
             />
-            <div>
-                <button onClick={handleClick}>
+            <div className='buttons-filter'>
+                <button 
+                    onClick={handleClick}
+                    className="search-button"
+                >
                     Pesquisar
                 </button>
-                <button onClick={handleClear}>
+                <button
+                    className="clear-button"
+                    onClick={handleClear}
+                >
                     Limpar
                 </button>
             </div>
         </div>
     );
-};
+}

@@ -21,8 +21,8 @@ import "./style.css";
  */
 export const DetailsPage = () => {
   const dispatch = useDispatch();
-  const personagem = useSelector((state: any) => state.person.personagem.personagem);
-  const indexArray = personagem?.id - 1;
+  const character = useSelector((state: any) => state.person.personagem.character);
+  const indexArray = character?.id - 1;
 
   const isFavorito = useSelector((state: any) => state.person.personagens[indexArray]);
   const episodes = useSelector((state: any) => state.person.episodes);
@@ -43,32 +43,31 @@ export const DetailsPage = () => {
     return array;
   }
 
-
   useEffect(() => {
-    if (personagem?.episode) {
-      let arrayIdEpisodes = arrayEpisodes(personagem.episode);
+    if (character?.episode) {
+      let arrayIdEpisodes = arrayEpisodes(character.episode);
       fetchEpisodesThunk(arrayIdEpisodes)(dispatch);
     }
     return;
-  }, [personagem?.episode, dispatch])
+  }, [character?.episode, dispatch])
 
   return (
     <div className="container">
-      <h3>{personagem?.name}</h3>
+      <h3>{character?.name}</h3>
       <div className={"detalhe"}>
         <div className={"detalhe-header"}>
           <img
-            src={personagem?.image}
-            alt={personagem?.name}
+            src={character?.image}
+            alt={character?.name}
           />
           <div className={"detalhe-header-texto"}>
-            <p>{personagem?.name}</p>
-            <p>Planeta: {personagem?.origin.name}</p>
-            <p>Genero: {personagem?.gender}</p>
+            <p>{character?.name}</p>
+            <p>Planeta: {character?.origin.name}</p>
+            <p>Genero: {character?.gender}</p>
           </div>
-          <ButtonFavorite isFavorito={isFavorito?.favorito} />
         </div>
       </div>
+
       <h4>Lista de episódios em que o personagem apareceu</h4>
       <div className={"episodios-grade"}>
         {episodes?.length ?

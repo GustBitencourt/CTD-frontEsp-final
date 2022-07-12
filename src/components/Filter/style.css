@@ -16,3 +16,29 @@
   border-radius: 3px;
   border: 1px solid #d0d0d0;
 }
+
+.buttons-filter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.search-button, .clear-button {
+  padding: 1rem;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.search-button {
+  background-color: #00a65a;
+}
+
+.clear-button {
+  background-color: #dd4b39;
+}

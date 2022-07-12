@@ -1,3 +1,5 @@
+import { Star } from "phosphor-react";
+
 import './style.css';
 
 /**
@@ -14,11 +16,11 @@ interface ButtonFavoriteProps {
 }
 
 export const ButtonFavorite = ({ isFavorito, onClick }: ButtonFavoriteProps) => {
-    const src = isFavorito ? "/images/star-filled.png" : "/images/star.png";
+    const favoriteStatus = isFavorito ? <Star className="estrela" size={32} weight="fill" /> : <Star size={32} weight="thin" />;
 
     return (
         <div className="botao_favorito" onClick={onClick}>
-            <img src={src} alt={"favorito"} />
+            {favoriteStatus}
         </div>
     );
 }
